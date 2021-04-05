@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+@font-face {
+    font-family: 'nike';
+    src: url('fonts/FuturaStdHeavy.ttf');
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'nike', sans-serif;
+    color: #222;
+    padding-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* <--- TODO NAV ---> */
+
+.nav {
+    position: fixed;
+    background-color: #000;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: all .3s ease-out;
+}
+
+.nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    transition: all .3s ease-in-out;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav a {
+    font-family: 'Quicksand';
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 15px;
+    transition: all .3s ease-in-out;
+}
+
+.logo a {
+    text-transform: uppercase;
+    font-family: 'nike';
+}
+
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.nav.active a {
+    color: #000;
+}
+
+.nav.active .container {
+    padding: 15px 0;
+}
+
+.nav a.homeActive, .nav a:hover {
+    color: #ff3737;
+}
+
+.hero {
+    background-image: url('https://i.pinimg.com/originals/26/1d/74/261d74b8205aace082b86186944f4fab.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    z-index: -2;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.hero h1 {
+    font-size: 46px;
+    margin: -20px 0px 20px;
+}
+
+.hero p {
+    font-family: 'Quicksand';
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.content p {
+    color: #444;
+    line-height: 30px;
+    letter-spacing: 1.3px;
+    font-family: 'Quicksand';
+}
+
+/* <--- TODO NAV ---> */
